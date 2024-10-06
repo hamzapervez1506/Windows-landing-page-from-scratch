@@ -61,7 +61,7 @@ font-family: sans-serif;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url('/images/tick.png'); /* Replace with your custom image */
+    background-image: url('images/tick.png'); /* Replace with your custom image */
     background-size: cover;
 }
 
