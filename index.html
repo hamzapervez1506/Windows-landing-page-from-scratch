@@ -32,6 +32,234 @@
       fbq("init", "3912294915721860");
       fbq("track", "PageView");
     </script>
+    <style>
+    /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: sans-serif;
+    background-color: white;
+}
+
+/* Header styling */
+.header {
+    background-color: rgb(227, 77, 78);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+/* Main content container */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;  /* Locking the layout to avoid unwanted stretching */
+    margin: 0 auto;  /* Center the content */
+    padding: 30px;
+    gap: 20px; /* Adds space between left and right sections */
+}
+
+/* Left section styling */
+.left {
+    width: 70%;  /* Ensure the layout doesn't stretch unevenly */
+    text-align: center;
+    /* padding: 1rem; /* Add some padding for spacing */
+} 
+
+.left h2 {
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Checklist styling */
+.checklist {
+    list-style: none;
+    margin: 15px auto;
+    padding: 0;
+    text-align: left;
+}
+
+.checklist li {
+    font-size: 18px;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 40px;
+}
+
+.checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('images/tick.png');  /* Ensure the path is correct */
+    background-size: cover;
+}
+
+/* Warning text */
+.warning {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Call-to-action button */
+.zip-btn {
+    background-color: #3367d6;
+    color: white;
+    padding: 20px;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    margin: 20px auto; /* Center button and add margin */
+    display: block;
+    width: 100%
+    max-width: 400px; /* Limit the button width */
+    height: 80px; /* Default height */
+}
+
+/* Reviews section */
+.reviews {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.reviews img {
+    width: 100px;
+    vertical-align: middle;
+}
+
+/* Logos section */
+.logos {
+    display: flex;
+    justify-content: center;
+}
+
+.logos img {
+    width: 80px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+/* Right section styling */
+.right {
+    width: 50%;  /* Ensure the layout doesn't stretch unevenly */
+}
+
+.right img {
+    width: 100%;  /* Make the image responsive to the container */
+    max-height: 560px;  /* Limit the height of the image */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;  /* This ensures the image covers the area while preserving aspect ratio */
+}
+
+.bbb-logo {
+    width: 50%;
+    margin-top: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #ececec;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #0073e6;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer img {
+    width: 100px;
+    margin: 10px 5px;
+}
+
+/* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness */
+@media screen and (min-width: 1200px) {
+    .main-content {
+        max-width: 1200px;  /* Locking the layout to avoid unwanted stretching */
+    }
+
+    .left, .right {
+        width: 50%;  /* Ensure the layout doesn't stretch unevenly */
+    }
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;  /* Stack sections vertically */
+        align-items: center;      /* Center align items */
+        padding: 10px;           /* Adjust padding */
+    }
+
+    .left, .right {
+        width: 100%;  /* Full width on smaller screens */
+        margin: 10px 0;  /* Add some vertical spacing between sections */
+    }
+
+    .left {
+        padding: 1rem; /* Optional: Add some padding */
+    }
+
+    .zip-btn {
+        font-size: 1.5rem;  /* Larger font size for button */
+        height: 60px;       /* Fixed height */
+        margin: 20px 0;     /* Add margin for spacing */
+    }
+
+    .checklist li {
+        font-size: 16px;  /* Slightly larger font size for checklist items */
+    }
+
+    .right img {
+        display: none;  /* Hide image on smaller screens */
+    }
+
+    .warning strong {
+        display: block; /* Block display for better alignment */
+        margin: 0; /* Remove margin */
+        text-align: center; /* Center align text */
+    }
+}
+
+/* Additional styling for very small screens */
+@media screen and (max-width: 480px) {
+    .header {
+        font-size: 8px;  /* Smaller header font */
+    }
+
+    .left h2 {
+        font-size: 25px;  /* Smaller h2 font */
+    }
+
+    .zip-btn {
+        font-size: 22px;  /* Smaller button font */
+        height: 70px;     /* Smaller button height */
+        width: 100%; /* Ensure the button fills the width */
+    }
+
+    .checklist li {
+        font-size: 15px;  /* Smaller checklist item font */
+    }
+}
+    </style>
     <noscript
       ><img
         height="1"
